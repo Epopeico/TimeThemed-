@@ -5,7 +5,7 @@ function louding(){
     var date = new Date()
     var hour = date.getHours()
     var min = date.getMinutes()
-    msg.innerHTML = ` Agora são ${hour} horas e ${min} minutos.`
+    msg.innerHTML = ` Agora são ${hour} hora(s) e ${min} minuto(s).`
 
     if (hour >= 0 && hour <=6 ) {
         // ta de madrugada vai dormir
