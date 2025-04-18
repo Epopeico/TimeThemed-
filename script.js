@@ -5,7 +5,8 @@ function loading(){
     var date = new Date()
     var hour = date.getHours()
     var min = date.getMinutes()
-    msg.innerHTML = ` Agora são ${hour} hora(s) e ${min} minuto(s).`
+    var sec = date.getSeconds()
+    msg.innerHTML = ` Agora são ${hour} hora(s) e ${min} minuto(s) e ${sec} segundos.`
 
     if (hour >= 0 && hour <=6 ) {
         // ta de madrugada vai dormir
@@ -15,7 +16,7 @@ function loading(){
         // bom dia
         document.body.style.background = "linear-gradient(to top, #F2AA6B, #F28963, #F2786D, #F2BBBB, #0D0D0D)"
         img.src = 'image/morning.png'
-    } else if (hour <= 18){
+    } else if (hour > 12 && hour <= 18){
         //boa tarde
         img.src = 'image/afternoon.png'
         document.body.style.background = "linear-gradient(to top, #F2EA7E, #F2E6D8, #A67A53,rgba(218, 22, 22, 0.81), #0D0D0D)"
